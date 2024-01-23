@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Please fill the data</h2>
+  <form method="post" action="{% url 'register' %}" class="container">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    <button type="submit">Register</button>
+    <button class="direct-login-button" onclick="window.location.href='{% url 'login' %}'"> Login</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome {{ user.username }}!</h2>
+  {% if user.userprofile.role == 'student' %}
+    <p>Your are a student</p>
+  {% elif user.userprofile.role == 'staff' %}
+    <p>Your are a staff</p>
+  {% elif user.userprofile.role == 'admin' %}
+    <p>Your are an admin</p>
+  {% elif user.userprofile.role == 'editor' %}
+    <p>Your are an editor</p>
+  {% endif %}
+
+  <button onclick="window.location.href='{% url 'register' %}'">Back to Register</button>
+{% endblock %}
