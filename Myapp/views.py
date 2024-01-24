@@ -36,7 +36,7 @@ def login_view(request):
 @login_required
 def home(request):
     user_role = request.user.userprofile.role
-    # Redirect to the appropriate page based on user role
+    # Redirect to the appropriate page based on user role currently handled all the users to same page
     if user_role == 'student':
         return render(request, 'user_role.html')
     elif user_role == 'staff':
