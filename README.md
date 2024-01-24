@@ -16,3 +16,9 @@ This Django project is a simple registration system with role-based access contr
 1. Clone the repository:
 
    git clone https://github.com/yourusername/django-registration-project.git
+2. Navigate to the project folder
+3.Run the project : =>
+   
+  python manage.py runserver
+
+  running default port should be :http://127.0.0.1:8000
